@@ -1,0 +1,183 @@
+@import "_variables";
+@import "_extends";
+@import "_mixins";
+
+.membership__main-text {
+	margin-top: 50px;
+	@extend %mainTextfonts;
+}
+
+.membership {
+	@include featureFonts(flex, space-between);
+
+	.membership-regular {
+		@include cartSize(299px, 405px);
+		margin-top: 45px;
+		color: $superbColor;
+		background-color: $headerCallColor;
+		font-family: $headerLogoFont;
+		.membership__price {
+			@include cartSize(203px, 45px);
+			@extend %sliderText;
+			font-size: 18px;
+			transform: translate(50px, 0px);
+			background-color: $headerIconColor;
+			display: block;
+			padding-top: 10px;
+		}
+		.membership__include {
+			margin-top: 30px;
+			font-size: 20px;
+			@extend %sliderText;
+		}
+		.membership__text {
+			margin-top: 32px;
+		}
+
+		.basic-list {
+			@include blockMargins(27px, 0, 0px, 59px);
+			@extend %normalTextsize;
+			position: relative;
+		}
+		.basic-list:before {
+			display: block;
+			content: "\f0da";
+			@include headerFonts(24px, $iconFontfamily, $superbColor);
+			font-weight: 900;
+			cursor: pointer;
+			@include blockPositions(absolute, -4px, -18px);
+		}
+
+		.membership__button {
+			display: block;
+			background-color: $headerIconColor;
+			color: $buttonFontColor;
+			@include cartSize(135px, 35px);
+			@extend %sliderText;
+			@extend %normalTextsize;
+			@include blockMargins(31px, 0, 25px, 140px);
+		}
+		a {
+			padding-top: 9px;
+			display: block;
+		}
+
+		.membership__button:hover {
+			background-color: $hoverColor;
+		}
+	}
+
+	.membership-elite {
+		@include cartSize(299px, 405px);
+		margin-top: 45px;
+		color: $superbColor;
+		background-color: $headerLogoColor;
+		font-family: $headerLogoFont;
+		.membership__price {
+			@include cartSize(203px, 45px);
+			@extend %sliderText;
+			font-size: 18px;
+			transform: translate(50px, 0px);
+			background-color: $headerCallColor;
+			display: block;
+			padding-top: 10px;
+		}
+		.membership__include {
+			margin-top: 30px;
+			font-size: 20px;
+			@extend %sliderText;
+		}
+		.membership__text {
+			margin-top: 32px;
+		}
+
+		.basic-list {
+			@include blockMargins(27px, 0, 0px, 59px);
+			@extend %normalTextsize;
+			position: relative;
+		}
+		.basic-list:before {
+			display: block;
+			content: "\f0da";
+			@include headerFonts(24px, $iconFontfamily, $superbColor);
+			font-weight: 900;
+			cursor: pointer;
+			@include blockPositions(absolute, -4px, -18px);
+		}
+
+		.membership__button {
+			display: block;
+			background-color: $headerCallColor;
+			color: $buttonFontColor;
+			@include cartSize(135px, 35px);
+			@extend %sliderText;
+			@extend %normalTextsize;
+			@include blockMargins(31px, 0, 25px, 140px);
+		}
+		a {
+			padding-top: 9px;
+			display: block;
+		}
+
+		.membership__button:hover {
+			background-color: $hoverColor;
+		}
+	}
+
+	.membership-pro {
+		@include cartSize(299px, 405px);
+		margin-top: 45px;
+		color: $superbColor;
+		background-color: $headerIconColor;
+		font-family: $headerLogoFont;
+		.membership__price {
+			@include cartSize(203px, 45px);
+			@extend %sliderText;
+			font-size: 18px;
+			transform: translate(50px, 0px);
+			background-color: $headerLogoColor;
+			display: block;
+			padding-top: 10px;
+		}
+		.membership__include {
+			margin-top: 30px;
+			font-size: 20px;
+			@extend %sliderText;
+		}
+		.membership__text {
+			margin-top: 32px;
+		}
+
+		.basic-list {
+			@include blockMargins(27px, 0, 0px, 59px);
+			@extend %normalTextsize;
+			position: relative;
+		}
+		.basic-list:before {
+			display: block;
+			content: "\f0da";
+			@include headerFonts(24px, $iconFontfamily, $superbColor);
+			font-weight: 900;
+			cursor: pointer;
+			@include blockPositions(absolute, -4px, -18px);
+		}
+
+		.membership__button {
+			display: block;
+			background-color: $headerLogoColor;
+			color: $buttonFontColor;
+			@include cartSize(135px, 35px);
+			@extend %sliderText;
+			@extend %normalTextsize;
+			@include blockMargins(31px, 0, 25px, 140px);
+		}
+		a {
+			padding-top: 9px;
+			display: block;
+		}
+
+		.membership__button:hover {
+			background-color: $hoverColor;
+		}
+	}
+}

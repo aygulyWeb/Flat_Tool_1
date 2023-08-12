@@ -1,0 +1,64 @@
+@import "_variables";
+@import "_extends";
+@import "_mixins";
+
+.header {
+	@extend %blockPaddings;
+
+	.header-top {
+		@include headerFlex(flex, row, space-between, start);
+	}
+
+	.header-top__logo {
+		@include headerFlex(flex, column, space-between, start);
+
+		.text__logo {
+			@extend %headerText;
+			font-size: 32px;
+			font-family: $headerLogoFont;
+			cursor: pointer;
+		}
+
+		.text__page {
+			@extend %headerText;
+			font-size: 10px;
+			font-family: $headerLandingFont;
+			padding-left: 25px;
+			color: $headerPageColor;
+		}
+	}
+
+	.header-top__social-icons {
+		list-style-type: none;
+		position: relative;
+		@include headerFlex(flex, row, start, center);
+
+		a,
+		li {
+			display: block;
+			text-decoration: none;
+			padding-left: 5px;
+		}
+		.call__now {
+			@include headerFonts(23px, $headerLogoFont, $headerCallColor);
+			text-transform: uppercase;
+		}
+
+		.fa-phone {
+			display: block;
+			font-weight: 900;
+			font-size: 29px;
+			color: $headerLogoColor;
+			transform: rotate(-15deg);
+		}
+
+		.call__tel {
+			@include headerFonts(23px, $headerLogoFont, $headerLogoColor);
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

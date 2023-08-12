@@ -1,0 +1,46 @@
+@mixin headerFlex($flex: flex, $direction: row, $justify, $align) {
+	display: $flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin headerFonts($size, $family: serif, $color) {
+	font-size: $size;
+	font-family: $family;
+	color: $color;
+}
+
+@mixin blockPositions($position: absolute, $top, $left) {
+	position: $position;
+	top: $top;
+	left: $left;
+}
+
+@mixin imageSize($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin cartSize($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin featureFonts($flex, $justify) {
+	display: $flex;
+	justify-content: $justify;
+}
+
+@mixin blockPaddings($top, $right, $bottom: 0, $left) {
+	padding-top: $top;
+	padding-right: $right;
+	padding-bottom: $bottom;
+	padding-left: $left;
+}
+@mixin blockMargins($top, $right, $bottom: 0, $left) {
+	margin-top: $top;
+	margin-right: $right;
+	margin-bottom: $bottom;
+	margin-left: $left;
+}

@@ -1,0 +1,38 @@
+@import "_variables";
+@import "_extends";
+@import "_mixins";
+
+.body-inner {
+	@include imageSize(100%, 111px);
+	background-color: $headerLogoColor;
+	margin-top: 56px;
+
+	.newsletter {
+		padding-top: 31px;
+		@include headerFlex(flex, row, space-between, center);
+
+		.newsletter__text {
+			text-transform: uppercase;
+
+			& p {
+				margin-bottom: -3px;
+				@include headerFonts(21px, $sliderMainTextFont, $superbColor);
+			}
+
+			& span {
+				@include headerFonts(32px, $sliderMainTextFont, $superbColor);
+				font-size: 28px;
+				letter-spacing: 3px;
+			}
+		}
+
+		.newsletter__message {
+			position: relative;
+			.newsletter__message-input {
+				@include blockPositions(absolute, 10px, -363px);
+				@include cartSize(363px, 36px);
+				outline: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+@import "_variables";
+@import "_extends";
+@import "_mixins";
+
+.wrap-inner {
+	@include imageSize(100%, 111px);
+	background-color: $headerLogoColor;
+	margin-top: -110px;
+
+	.slider-buttons {
+		@include headerFlex(flex, row, flex-end, center);
+		@include headerFonts(18px, $headerLogoFont, $buttonFontColor);
+		@extend %sliderText;
+		position: relative;
+		padding-top: 35px;
+
+		a {
+			color: $buttonFontColor;
+		}
+	}
+
+	.slider__buy-now {
+		@include imageSize(218px, 41px);
+		margin-right: 21px;
+		background-color: $headerIconColor;
+
+		& a {
+			padding-top: 10px;
+			display: block;
+		}
+	}
+
+	.slider__buy-now:hover {
+		background-color: $hoverColor;
+	}
+
+	.slider__try-demo {
+		@include imageSize(140px, 41px);
+		background-color: $headerCallColor;
+
+		& a {
+			padding-top: 10px;
+			display: block;
+		}
+	}
+
+	.slider__try-demo:hover {
+		background-color: $hoverColor;
+	}
+}

@@ -1,0 +1,26 @@
+@import "_variables";
+@import "_extends";
+@import "_mixins";
+
+.copyright {
+	@include blockMargins(38px, 0, 33px, 0);
+	@include featureFonts(flex, space-between);
+
+	.copyright__copr {
+		@include headerFonts(15px, $headerLogoFont, $footerTextcolor);
+	}
+
+	.copyright__privacy {
+		font-family: $headerLogoFont;
+		font-size: 15px;
+
+		& a {
+			color: $footerTextcolor;
+			margin-left: 15px;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+}

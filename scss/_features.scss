@@ -1,0 +1,65 @@
+@import "_variables";
+@import "_extends";
+@import "_mixins";
+
+.features-block {
+	@include blockPaddings(50px, 16px, 0, 16px);
+
+	.features__main-text {
+		@extend %mainTextfonts;
+	}
+
+	.features {
+		padding-top: 55px;
+		@include headerFlex(flex, row, space-between, start);
+	}
+
+	.features__asignment {
+		.features-flex {
+			@include featureFonts(flex, space-between);
+
+			.features-lorem {
+				padding-top: 15px;
+				@extend %featuresLoremstext;
+				@extend %featuresIconstext;
+			}
+		}
+		.features-text {
+			@include blockMargins(26px, 55px, 0, 0);
+			@include headerFonts(15px, $headerLogoFont, $headerCallColor);
+			line-height: 24px;
+			text-align: justify;
+		}
+	}
+	.features__search {
+		.features-flex {
+			@include featureFonts(flex, space-between);
+			.features-lorem {
+				@extend %featuresLoremstext;
+				@extend %featuresIconstext;
+			}
+		}
+		.features-text {
+			@include blockMargins(26px, 45px, 0, 0);
+			@include headerFonts(15px, $headerLogoFont, $headerCallColor);
+			line-height: 24px;
+			text-align: justify;
+		}
+	}
+
+	.features__settings {
+		.features-flex {
+			@include featureFonts(flex, space-between);
+			.features-lorem {
+				@extend %featuresLoremstext;
+				@extend %featuresIconstext;
+			}
+		}
+		.features-text {
+			@include blockMargins(26px, 0, 0, 5px);
+			@include headerFonts(15px, $headerLogoFont, $headerCallColor);
+			line-height: 24px;
+			text-align: justify;
+		}
+	}
+}

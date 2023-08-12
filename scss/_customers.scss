@@ -1,0 +1,59 @@
+@import "_variables";
+@import "_extends";
+@import "_mixins";
+
+.content {
+	@include featureFonts(flex, space-between);
+
+	.customers {
+		.customers__main-text {
+			margin-top: 50px;
+			text-align-last: left;
+			@extend %mainTextfonts;
+		}
+	}
+
+	.customers__img-text {
+		margin-top: 33px;
+		@include featureFonts(flex, space-between);
+
+		& p {
+			@include blockMargins(0, 20px, 5px, 20px);
+			@extend %normalTextsize;
+			font-family: $headerLogoFont;
+		}
+
+		& img {
+			@include imageSize(48px, 48px);
+		}
+
+		& span {
+			font-family: $headerLogoFont;
+			@extend %normalTextsize;
+			margin-left: 20px;
+		}
+
+		& a {
+			color: $headerIconColor;
+			text-transform: capitalize;
+			font-family: $headerLogoFont;
+			@extend %normalTextsize;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.learn-more {
+		.learn-more__main-text {
+			margin-top: 50px;
+			text-align-last: left;
+			@extend %mainTextfonts;
+		}
+
+		.learn-more__video {
+			@include cartSize(418px, 250px);
+			@include blockMargins(30px, 20px, 0, 5px);
+		}
+	}
+}

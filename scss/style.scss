@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Raleway&display=swap");
+@import "_header";
+@import "_slider";
+@import "_slider-buttons";
+@import "_features";
+@import "_flattool";
+@import "_membership";
+@import "_customers";
+@import "_newsletter";
+@import "_footer";
+@import "_variables";
+@import "_extends";
+@import "_mixins";
+
+// CONTAINERS
+.wrapper {
+	max-width: 100%;
+}
+.container {
+	max-width: 941px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}

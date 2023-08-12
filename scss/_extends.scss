@@ -1,0 +1,35 @@
+%headerText {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+%sliderText {
+	text-transform: capitalize;
+	text-align: center;
+}
+
+%normalTextsize {
+	font-size: 15px;
+}
+
+%blockPaddings {
+	padding-top: 31px;
+	padding-bottom: 31px;
+}
+%mainTextfonts {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: $sliderMainTextFont;
+	font-size: 32px;
+}
+
+%featuresIconstext {
+	font-size: 25px;
+	font-family: $sliderMainTextFont;
+	text-transform: uppercase;
+}
+
+%featuresLoremstext {
+	margin-left: 20px;
+	margin-right: 40px;
+}

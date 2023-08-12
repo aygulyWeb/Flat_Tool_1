@@ -1,0 +1,13 @@
+@import "_variables";
+@import "_extends";
+@import "_mixins";
+
+.flattool__main-text {
+	margin-top: 50px;
+	@extend %mainTextfonts;
+}
+
+.flattool__images {
+	margin-top: 48px;
+	@include featureFonts(flex, space-between);
+}

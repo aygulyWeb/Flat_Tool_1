@@ -1,0 +1,60 @@
+@import "_variables";
+@import "_extends";
+@import "_mixins";
+
+.wrap {
+	width: 100%;
+	min-height: 520px;
+	background-color: $headerIconColor;
+}
+
+.slider {
+	@include headerFlex(flex, row, space-between, start);
+	padding-top: 62px;
+
+	.slider__mac-flat {
+		position: relative;
+		img {
+			@include imageSize(506px, 406px);
+		}
+
+		.slider-anim {
+			@include blockPositions(absolute, -50px, 2px);
+
+			img {
+				@include imageSize(460px, 260px);
+
+				@include blockPositions(absolute, 79px, 19px);
+
+				animation: move 2.5s ease-out infinite;
+			}
+
+			@keyframes move {
+				0% {
+					opacity: 0;
+				}
+				25% {
+					opacity: 2;
+				}
+				50% {
+					opacity: 2;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+		}
+	}
+	.slider__text-superb {
+		.superb__text {
+			@include headerFonts(32px, $sliderMainTextFont, $superbColor);
+			padding: 25px 50px;
+		}
+
+		.lorem__text {
+			@include headerFonts(15px, $headerLogoFont, $headerCallColor);
+			padding: 0 68px 0 50px;
+			letter-spacing: 2px;
+		}
+	}
+}
